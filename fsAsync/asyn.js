@@ -12,6 +12,10 @@ const fs = require('fs');
   //  console.log('added dumb');
 //})
 
-fs.readFile('./trial/bio.txt','utf-8',(err,data) => {
-    console.log('data');
+//fs.readFile('./trial/bio.txt','utf-8',(err,data) => {
+    //console.log('data');
+//})
+
+fs.rename('./trial/bio.txt','./trial/randombio.txt',(err) => {
+    console.log('renamed');
 })
