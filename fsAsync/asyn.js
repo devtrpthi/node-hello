@@ -4,6 +4,10 @@ const fs = require('fs');
    // console.log('create a folder');
 //});
 
-fs.writeFile('./trial/bio.txt','Dumb yard!',(err) => {
-    console.log('file created');
-});
+//fs.writeFile('./trial/bio.txt','Dumb yard!',(err) => {
+    //console.log('file created');
+//});
+
+fs.appendFile('./trial/bio.txt','(:add something macha!', (err) => {
+    console.log('added dumb');
+})
