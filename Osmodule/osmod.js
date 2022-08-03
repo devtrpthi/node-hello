@@ -1,7 +1,7 @@
 const os = require('os');
 
 console.log(os.arch());
-
+console.log(os.hostname());
 
 const freememory = os.freemem();
 console.log(`${freememory/1024/1024/1024}`);
