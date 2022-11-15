@@ -18,8 +18,11 @@ app.get('/contact', (req,res) => {
 })
 
 app.get('/temp', (req,res) => {
-  res.send("welcome to temp page");
-})
+  res.send({
+    id: 1,
+    name: "dev",
+  });
+});
 
 app.listen(port, () => {
   console.log(`listening to port number ${3000}`);
