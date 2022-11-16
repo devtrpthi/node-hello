@@ -1,7 +1,14 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 
+
+const staticPath = path.join(__dirname,'../public');
+
+
 const port = 3000;
+
+app.use(express.static(staticPath));
 
 app.get('/', (req,res) => {
   res.write("<h1>welcome to home page</h1>");
@@ -17,13 +24,6 @@ app.get('/contact', (req,res) => {
   res.send("welcome to contact  page");
 })
 
-app.get('/temp', (req,res) => {
-  res.send({
-    id: 1,
-    name: "dev",
-  });
-});
-
 app.listen(port, () => {
-  console.log(`listening to port number ${3000}`);
+  console.log(`listening to port number ${port}`);
 })
