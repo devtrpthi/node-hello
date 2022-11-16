@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-
+const hbs = require('hbs');
 
 const staticPath = path.join(__dirname,'../public');
 
