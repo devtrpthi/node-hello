@@ -21,18 +21,27 @@ const Playlist = new mongoose.model('Playlist', listSchema);
 
 const createDocument = async () => {
   try{
-    const nodePlaylist = new Playlist({
-      name: 'nodejs',
+    const jsPlaylist = new Playlist({
+      name: 'javascript',
       ctype: 'backend',
-      videos: 10,
+      videos: 5,
       author: 'nobody',
       active: false
     })
+    
+    const mongoPlaylist = new Playlist({
+       name: 'mongodb',
+       ctype: 'database',
+       videos: 30,
+       author: 'nobody',
+       active: true 
+    })
 
-    const result = await nodePlaylist.save();
+    const result = await Playlist.insertMany([jsPlaylist,mongoPlaylist]);
     console.log(result);
   }catch(err){
     console.log(err);
   }
 }
  createDocument();
+
